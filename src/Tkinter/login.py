@@ -35,20 +35,25 @@ window.geometry('800x600')
 title = Label(window, text="Привествуем в информационной системе КАФЕ", font=('Times New Roman', 16 ))
 title.grid(column = 0, row = 0) # координаты текста в окне
 
-button_login = Button(window,text='Войти',height= 2,width=8,background = 'green', foreground='white', command=login)
-button_login.grid(column = 0, row =2)
+button_login = Button(window,text='Войти',
+                      height= 2,
+                      width=8,
+                      background = 'green',
+                      foreground='white',
+                      command=login)
+button_login.grid(column = 0 , row =1)
 message = Label(text='!!!!!!!!')
-message.grid(column= 0, row = 3)
+message.grid(column= 0, row = 4)
 
 log_title = Label(window, text='Введите логин')
-log_title.grid(column= 0, row = 4)
+log_title.grid(column= 0, row = 5)
 log_in = Entry(window, width=20)
-log_in.grid(column = 1, row= 4)
+log_in.grid(column = 1, row= 5)
 
 passwd_title = Label(window, text='Введите пароль')
-passwd_title.grid(column= 0, row = 5)
-passwd_in = Entry(window, width=30)
-passwd_in.grid(column= 0, row = 5)
+passwd_title.grid(column= 0, row = 6)
+passwd_in = Entry(window, width=20)
+passwd_in.grid(column= 1, row = 6)
 
 
 
