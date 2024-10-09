@@ -2,7 +2,7 @@
 from tkinter import *
 
 from src.Controllers.UsersController import UsersControllers
-from src.Models.Users import Users
+
 
 
 #функционал
