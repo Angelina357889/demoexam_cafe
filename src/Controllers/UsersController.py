@@ -16,6 +16,8 @@ class UsersControllers():
     def update_status(self, id_users):
         Users.update({Users.status : False}).where(Users.id == id_users).execute()
 
+    def update_statys_true(self):
+        Users.update({Users.status: True}).execute()
     @classmethod
     def show(cls, login):
         return Users.get(Users.login==login)
@@ -27,6 +29,7 @@ if __name__ == '__main__':
     #print(use.log_in('z','z'))
     for row in use.get():
         print(row.login, row.password)
+    use.update_statys_true()
     # use.add('Ivan', '1234', 'Ivanov', 1)
     for row in use.get():
         print(row.login, row.password)
