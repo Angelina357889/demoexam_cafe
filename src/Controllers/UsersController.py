@@ -22,6 +22,16 @@ class UsersControllers():
     def show(cls, login):
         return Users.get(Users.login==login)
 
+    @classmethod
+    def show_users(cls, role_id):
+        return Users.select().where(Users.role_id == role_id)
+
+    @classmethod
+    def list_users(cls,role_id):
+        list = []
+        for users in UsersControllers.show_users(role_id):
+            list.append(users.name)
+        return list
 
 if __name__ == '__main__':
     use = UsersControllers()

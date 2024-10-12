@@ -4,7 +4,7 @@ from src.Models.Orders import *
 class OrdersController():
     @classmethod
     def get(cls):
-        return Orders.select()
+        return Orders.select().execute()
 
     @classmethod
     def add(self, count_cliens, table_id, drink_id, food_id, shift_id):
